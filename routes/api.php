@@ -14,4 +14,5 @@ Route::group(['prefix' => 'products', 'middleware' => 'auth:sanctum'], function 
     Route::get('edit/{id}', [ProductController::class, 'edit']);
     Route::post('update/{id}', [ProductController::class, 'update']);
     Route::delete('delete/{id}', [ProductController::class, 'delete']);
+    Route::get('status/{id}', [ProductController::class, 'changeStatus']);
 });
